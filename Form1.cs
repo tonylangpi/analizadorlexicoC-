@@ -23,16 +23,22 @@ namespace AnalisisLexico
             string caracterRerpresentado = "";
             switch (palabra)
             {
-                case "COMENZAR":
+                case "comenzar":
                     caracterRerpresentado = "Palabra reservada de inicio";
                     break;
-                case "STR":
+                case "cadena":
                     caracterRerpresentado = "Variable de tipo string";
+                    break;
+                case "entero":
+                    caracterRerpresentado = "Variable de tipo int";
+                    break;
+                case "decimal":
+                    caracterRerpresentado = "Variable de tipo decimal";
                     break;
                 case ";":
                     caracterRerpresentado = "Signo de cierre de sentencia";
                     break;
-                case "%":
+                case "=":
                     caracterRerpresentado = "Signo de asignación";
                     break;
                 case "==":
@@ -50,11 +56,35 @@ namespace AnalisisLexico
                 case "<":
                     caracterRerpresentado = "Signo menor";
                     break;
-                case "FIN":
-                    caracterRerpresentado = "Fin del programa";
+                case "=<":
+                    caracterRerpresentado = "Menor igual que";
                     break;
-                case "Fun":
-                    caracterRerpresentado = "declaración de función";
+                case "=>":
+                    caracterRerpresentado = "Mayor igual que";
+                    break;
+                case "(":
+                    caracterRerpresentado = "Parentesis izquierdo";
+                    break;
+                case ")":
+                    caracterRerpresentado = "Parentesis derecho";
+                    break;
+                case "{":
+                    caracterRerpresentado = "Llave derecho";
+                    break;
+                case "}":
+                    caracterRerpresentado = "Llave izquierdo";
+                    break;
+                case "[":
+                    caracterRerpresentado = "Corchete izquierdo";
+                    break;
+                case "]":
+                    caracterRerpresentado = "Corchete derecho";
+                    break;
+                case "&":
+                    caracterRerpresentado = "Operador AND";
+                    break;
+                case "||":
+                    caracterRerpresentado = "Operador OR";
                     break;
                 default:
                     int val = 0;
